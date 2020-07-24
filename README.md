@@ -2,6 +2,8 @@
 
 ### Uma aplicação para colocar em prática conceitos de [algoritmos genéticos](https://pt.wikipedia.org/wiki/Algoritmo_gen%C3%A9tico).
 
+Você pode encontrar o tutorial [aqui](https://www.youtube.com/watch?v=bGz7mv2vD6g).
+
 ## :rocket: Tecnologias
 
 Este projeto foi desenvolvido com a biblioteca gráfica [p5.js](https://p5js.org/).
