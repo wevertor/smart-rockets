@@ -30,7 +30,7 @@ class Population {
   }
 
   selection(_mutationLevel) {
-    let mutationLevel = _mutationLevel || 0.05;
+    let mutationLevel = _mutationLevel || 0.005;
     let newRockets = [];
 
     this.rockets.forEach((rocket) => {
