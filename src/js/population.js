@@ -10,6 +10,7 @@ class Population {
       this.rockets.push(new Rocket(lifespan, target));
   }
 
+  // verifica quem são os mais aptos e aumenta a sua probabilidade de reprodução
   evaluate() {
     let maxFitness = 0;
     this.rockets.forEach((rocket) => {
@@ -29,6 +30,7 @@ class Population {
     });
   }
 
+  // cria a nova poopulação
   selection(_mutationLevel) {
     let mutationLevel = _mutationLevel || 0.005;
     let newRockets = [];

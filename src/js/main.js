@@ -3,6 +3,7 @@ const lifespam = 500;
 
 let target;
 let population;
+let obstacles;
 let count;
 
 function setup() {
@@ -11,6 +12,7 @@ function setup() {
   count = 0;
   target = new Target(width / 2, 80, 32);
   population = new Population(populationSize, lifespam, target);
+  obstacles = [];
 }
 
 function draw() {
@@ -19,7 +21,6 @@ function draw() {
 
   if (count === lifespam) {
     population.evaluate();
-    console.log(population.rockets);
     population.selection();
 
     count = 0;
@@ -27,4 +28,12 @@ function draw() {
 
   population.run();
   target.draw();
+
+  obstacles.forEach((obstacle) => {
+    obstacle.draw();
+  });
+}
+
+function mouseClicked() {
+  obstacles.push(new Obstacle(mouseX, mouseY, 40, 20));
 }

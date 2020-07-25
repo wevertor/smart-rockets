@@ -2,7 +2,6 @@ class Target {
   constructor(x, y, size) {
     this.pos = createVector(x, y);
     this.size = size;
-    console.log("aaa");
   }
 
   draw() {

@@ -71,6 +71,19 @@ class Rocket {
       this.pos.y > height
     )
       this.crashed = true;
+
+    if (obstacles.length > 0) {
+      obstacles.forEach((obstacle) => {
+        if (
+          this.pos.x > obstacle.x - obstacle.w / 2 &&
+          this.pos.x < obstacle.x + obstacle.w / 2 &&
+          this.pos.y > obstacle.y - obstacle.h / 2 &&
+          this.pos.y < obstacle.y + obstacle.h / 2
+        ) {
+          this.crashed = true;
+        }
+      });
+    }
   }
 
   haveCompleted() {
